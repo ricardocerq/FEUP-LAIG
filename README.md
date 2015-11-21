@@ -14,3 +14,35 @@ The shader developed applies a texture, the heightmap, and alters the positions 
 Languages: Javascript and GLSL
 
 Technologies: WebGL
+
+Screenshots
+<p align="center">
+  <img src="FEUP-LAIG/Project 1/images/print.png" >
+    <span class="caption">
+      <p align="center">Screenshot 1</p>
+    </span>
+</p>
+<p align="center">
+  <img src="FEUP-LAIG/Project 1/images/print2.png" >
+    <span class="caption">
+      <p align="center">Screenshot 2</p>
+    </span>
+</p>
+<p align="center">
+  <img src="FEUP-LAIG/Project 1/images/LAIG_T2_G04.1.jpg" >
+    <span class="caption">
+      <p align="center">Screenshot 3</p>
+    </span>
+</p>
+<p align="center">
+  <img src="FEUP-LAIG/Project 1/images/LAIG_T2_G04.2.jpg" >
+    <span class="caption">
+      <p align="center">Screenshot 4</p>
+    </span>
+</p>
+<p align="center">
+  <img src="FEUP-LAIG/Project 1/images/LAIG_T2_G04.3.jpg" >
+    <span class="caption">
+      <p align="center">Screenshot 4</p>
+    </span>
+</p>
