@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<SCENE>
+	<INITIALS>
+	    <frustum near="0.1" far="10000.0"/>                      <!-- frustum planes-->
+	    <translation x="0" y="0" z="0" />                 <!-- initial translate -->
+	    <rotation axis="x" angle="0" />                  <!-- initial rotation 3 -->
+	    <rotation axis="y" angle="0.0" />                  <!-- initial rotation 2 -->
+	    <rotation axis="z" angle="0.0" /> 
+	    <scale sx="1.0" sy="1.0" sz="1.0" />                  <!-- initial scaling -->     
+	    <reference length="0" />                       <!-- axis length; "0" 
+	    means no axis-->
+	</INITIALS>
+
+	<ILLUMINATION>
+	    <ambient r="0.1" g=".1" b="0.1" a="1" />            <!-- global ambient -->
+	                        <!-- double or single side illum. -->
+	    <background r="0" g="0" b="0" a="1" />         <!-- background color -->
+	</ILLUMINATION>
+
+	<LIGHTS>
+	    <LIGHT id="l1">                                  
+	        <enable value="1" />                         
+	        <position x="10" y="7.5" z="10" w="1" />      
+	        <ambient r=".1" g=".1" b=".1" a="1" />        
+	        <diffuse r="1" g="1" b="1" a="1" />       
+	        <specular r="1" g="1" b="1" a="1" />       
+	    </LIGHT>
+	    <LIGHT id="l2">                                    <!-- light identifier -->
+	        <enable value="1" />                         <!-- enable/disable -->
+	        <position x="15" y="15" z="15" w="1" />       <!-- light position -->
+	        <ambient r=".1" g=".1" b=".1" a="1" />        <!-- ambient component -->
+	        <diffuse r="1" g="1" b="1" a="1" />        <!-- diffuse component -->
+	        <specular r="1" g="1" b="1" a="1" />       <!-- specular component -->
+	    </LIGHT>
+	    <LIGHT id="l3">                               
+	        <enable value="1" />                      
+	        <position x="5" y="10" z="0" w="1" />     
+	        <ambient r=".1" g=".1" b=".1" a="1" />    
+	        <diffuse r="1" g="1" b="1" a="1" />       
+	        <specular r="1" g="1" b="1" a="1" />      
+	    </LIGHT>
+
+    <!-- NOTE: this block "LIGHT" must be repeated as necessary with different "id" -->
+	</LIGHTS>
+
+	<TEXTURES>
+    	<TEXTURE id="wood">
+        	<file path="textures/whitewood.jpg" />                             <!-- path to file -->
+       		<amplif_factor s="1" t="1" />                <!-- x/s, y/t -->
+    	</TEXTURE>
+    	
+
+
+
+    <!-- NOTE: this block "TEXTURE" must be repeated as necessary with different "id" -->
+    
+	</TEXTURES>
+
+	<MATERIALS>
+   		<MATERIAL id="mat1">                                  
+        	<shininess value="10" />
+        	<specular r=".5" g=".5" b=".5" a="1" />        <!-- specular reflection -->
+        	<diffuse r=".1" g=".1" b=".1" a="1" />         <!-- diffuse reflection -->
+        	<ambient r=".1" g=".1" b=".1" a="1" />         <!-- ambient reflection -->
+        	<emission r="0" g="0" b="0" a="1" />        <!-- emission component -->
+    	</MATERIAL>
+
+    	<MATERIAL id="mat2">                                  
+        	<shininess value="50" />
+        	<specular r=".5" g=".5" b=".5" a="1" />        <!-- specular reflection -->
+        	<diffuse r=".25" g=".25" b=".25" a="1" />         <!-- diffuse reflection -->
+        	<ambient r=".1" g=".1" b=".1" a="1" />         <!-- ambient reflection -->
+        	<emission r="0.5" g="0.5" b="0.5" a="1" />        <!-- emission component -->
+    	</MATERIAL>
+
+	</MATERIALS>
+	<!--new MyLinearAnimation(this, [[0,0,0],[0,.25,0], [0,0,0],[0,.25,0],[0,0,0],[0,.25,0],[0,0,0],[0,.25,0],[0,0,0]], 10),
+											new MyLinearAnimation(this, [[0,0,0],[0,5,0],[5,5,0]], 2.5),
+											new MyCircularAnimation(this, [5,5,10/Math.PI], 10/Math.PI, 90, -180, 2.5),
+											new MyLinearAnimation(this, [[5,5,2*10/Math.PI],[-5,5,2*10/Math.PI]], 2.5),
+											new MyCircularAnimation(this, [-5,5,10/Math.PI], 10/Math.PI, -90, -180, 2.5),
+											new MyLinearAnimation(this, [[-5,5,0],[0,5,0],[0,0,0]], 2.5),-->
+	<animations>
+		<animation id="anim1" span="10" type="linear">
+			<controlpoint xx="0" yy="0" zz="0"/>
+			<controlpoint xx="0" yy="0.25" zz="0"/>
+			<controlpoint xx="0" yy="0" zz="0"/>
+			<controlpoint xx="0" yy="0.25" zz="0"/>
+			<controlpoint xx="0" yy="0" zz="0"/>
+			<controlpoint xx="0" yy="0.25" zz="0"/>
+			<controlpoint xx="0" yy="0" zz="0"/>
+			<controlpoint xx="0" yy="0.25" zz="0"/>
+			<controlpoint xx="0" yy="0" zz="0"/>
+		</animation>
+		<animation id="anim2" span="2.5" type="linear">
+			<controlpoint xx="0" yy="0" zz="0"/>
+			<controlpoint xx="0" yy="5" zz="0"/>
+			<controlpoint xx="5" yy="5" zz="0"/>
+		</animation>
+		<animation id="anim3" span="2.5" type="circular" center="5 5 3.183098" radius="3.183098" startang="90" rotang="-180"/>
+		<animation id="anim4" span="2.5" type="linear">
+			<controlpoint xx="5" yy="5" zz="6.366198"/>
+			<controlpoint xx="-5" yy="5" zz="6.366198"/>
+		</animation>
+		<animation id="anim5" span="2.5" type="circular" center="-5 5 3.183098" radius="3.183098" startang="-90" rotang="-180"/>
+		<animation id="anim6" span="2.5" type="linear">
+			<controlpoint xx="-5" yy="5" zz="0"/>
+			<controlpoint xx="0" yy="5" zz="0"/>
+			<controlpoint xx="0" yy="0" zz="0"/>
+		</animation>
+	</animations>
+
+
+	<LEAVES>
+	    <!--<LEAF id="rect" type="rectangle" args="-.5 .5 .5 -.5" />
+	    <LEAF id="cyl" type="cylinder" args="1 1 1 12 64" />
+	    <LEAF id="circle" type="cylinder" args="0 1 0 3 64" />
+	    <LEAF id="cone" type="cylinder" args="1 1 0 64 64" /> 
+	    <LEAF id="sph" type="sphere" args="1 64 64" />
+	    <LEAF id="tri" type="triangle" args=".5 .5 0  -.5 .5 0  -.5 -.5 0" />
+	    <LEAF id="tri1" type="triangle" args="0 0 0.5  1 0 0  0 1.5 0" />
+	    <LEAF id="ufo" type="vehicle" args="0"/>
+	    <LEAF id="plane" type="plane" args="100"/>-->
+	    <LEAF id="plane" type="plane" parts="10"/>
+	    <!--<LEAF id="flaghalf1" type="patch" args="3 100 100">
+	    	<controlpoint x="-1.0" y="-1.0" z= " 1" />
+			<controlpoint x="-1.0" y="-0.5" z= " 1" />
+			<controlpoint x="-1.0" y=" 0.5" z= " 1" />
+			<controlpoint x="-1.0" y=" 1.0" z= " 1" />
+			<controlpoint x="-0.5" y="-1.0" z= "-1" />
+			<controlpoint x="-0.5" y="-0.5" z= "-1" />
+			<controlpoint x="-0.5" y=" 0.5" z= "-1" />
+			<controlpoint x="-0.5" y=" 1.0" z= "-1" />
+			<controlpoint x=" 0.5" y="-1.0" z= " 1" />
+			<controlpoint x=" 0.5" y="-0.5" z= " 1" />
+			<controlpoint x=" 0.5" y=" 0.5" z= " 1" />
+			<controlpoint x=" 0.5" y=" 1.0" z= " 1" />
+ 			<controlpoint x=" 1.0" y="-1.0" z= "-1" />
+			<controlpoint x=" 1.0" y="-0.5" z= "-1" />
+			<controlpoint x=" 1.0" y=" 0.5" z= "-1" />
+			<controlpoint x=" 1.0" y=" 1.0" z= "-1" />
+	    </LEAF>
+	    <LEAF id="ufo" type="vehicle" args="0"/>
+	    <LEAF id="terceira" type="terrain" args= "textures/terceira_color.jpg textures/terceira_height.jpg"/>
+	    <LEAF id="ufo2" type="vehicle"/>-->
+	    <LEAF id="flaghalf1" type="patch" order="3" partsU="100" partsV="100">
+	    	<controlpoint x="-1.0" y="-1.0" z= " 1" />
+			<controlpoint x="-1.0" y="-0.5" z= " 1" />
+			<controlpoint x="-1.0" y=" 0.5" z= " 1" />
+			<controlpoint x="-1.0" y=" 1.0" z= " 1" />
+			<controlpoint x="-0.5" y="-1.0" z= "-1" />
+			<controlpoint x="-0.5" y="-0.5" z= "-1" />
+			<controlpoint x="-0.5" y=" 0.5" z= "-1" />
+			<controlpoint x="-0.5" y=" 1.0" z= "-1" />
+			<controlpoint x=" 0.5" y="-1.0" z= " 1" />
+			<controlpoint x=" 0.5" y="-0.5" z= " 1" />
+			<controlpoint x=" 0.5" y=" 0.5" z= " 1" />
+			<controlpoint x=" 0.5" y=" 1.0" z= " 1" />
+ 			<controlpoint x=" 1.0" y="-1.0" z= "-1" />
+			<controlpoint x=" 1.0" y="-0.5" z= "-1" />
+			<controlpoint x=" 1.0" y=" 0.5" z= "-1" />
+			<controlpoint x=" 1.0" y=" 1.0" z= "-1" />
+	    </LEAF>
+	    <LEAF id="ufo" type="vehicle"/>
+	    <LEAF id="terceira" type="terrain" texture="textures/terceira_color.jpg" heightmap="textures/terceira_height.jpg"/>
+	</LEAVES>
+
+	<NODES>
+	    <ROOT id= "scene"/>
+	     <NODE id="scene">      
+	        <MATERIAL id="mat1" /> 
+	        <TEXTURE id="null" />
+	        <DESCENDANTS>
+	        	 
+	            <DESCENDANT id="ilha"/>
+	            <DESCENDANT id="ufoanim"/>
+	        </DESCENDANTS>
+	    </NODE>
+	     <NODE id="ufoanim">      
+	        <MATERIAL id="mat1" /> 
+	        <TEXTURE id="null" />
+	        <TRANSLATION x="0" y="1" z="0"/>
+	        <animationref id="anim1"/>
+	        <animationref id="anim2"/>
+	        <animationref id="anim3"/>
+	        <animationref id="anim4"/>
+	        <animationref id="anim5"/>
+	        <animationref id="anim6"/>
+	        <DESCENDANTS>
+	            <DESCENDANT id="ufo"/>
+	        </DESCENDANTS>
+	    </NODE>
+	     <NODE id="ilha">      
+	        <MATERIAL id="null" /> 
+	        <TEXTURE id="null" />
+	        <TRANSLATION x="2" y="-2" z="15"/>
+	        <SCALE sx="50" sy="5" sz="50"/>
+	        <ROTATION axis="y" angle="180"/>
+	        <DESCENDANTS>
+	            <DESCENDANT id="terceira"/>
+	        </DESCENDANTS>
+	    </NODE>
+
+	</NODES>
+</SCENE>
