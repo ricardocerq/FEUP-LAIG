@@ -17,32 +17,32 @@ Technologies: WebGL
 
 Screenshots
 <p align="center">
-  <img src="FEUP-LAIG/Project 1/images/print.png" >
+  <img src="/Project 1/images/print.png" >
     <span class="caption">
-      <p align="center">Screenshot 1</p>
+      <p align="center">Example Scene</p>
     </span>
 </p>
 <p align="center">
-  <img src="FEUP-LAIG/Project 1/images/print2.png" >
+  <img src="/Project 1/images/print2.png" >
     <span class="caption">
-      <p align="center">Screenshot 2</p>
+      <p align="center">Example Scene</p>
     </span>
 </p>
 <p align="center">
-  <img src="FEUP-LAIG/Project 1/images/LAIG_T2_G04.1.jpg" >
+  <img src="/Project 1/images/LAIG_T2_G04.1.jpg" >
     <span class="caption">
-      <p align="center">Screenshot 3</p>
+      <p align="center">Example Scene</p>
     </span>
 </p>
 <p align="center">
-  <img src="FEUP-LAIG/Project 1/images/LAIG_T2_G04.2.jpg" >
+  <img src="/Project 1/images/LAIG_T2_G04.2.jpg" >
     <span class="caption">
-      <p align="center">Screenshot 4</p>
+      <p align="center">Example Scene</p>
     </span>
 </p>
 <p align="center">
-  <img src="FEUP-LAIG/Project 1/images/LAIG_T2_G04.3.jpg" >
+  <img src="/Project 1/images/LAIG_T2_G04.3.jpg" >
     <span class="caption">
-      <p align="center">Screenshot 4</p>
+      <p align="center">Example Scene</p>
     </span>
 </p>
